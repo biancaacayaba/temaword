@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">          
     <title><?php wp_title();?></title>
+    
+
     <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/assets/css/bootstrap/css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>" type="text/css"/>
    <?php wp_head();?>
@@ -16,10 +18,24 @@
                </a>
                
            </div>
+           
            <div class="col-md-9 titulo">
                <h1><?php bloginfo('name')?></h1>
                <h2><?php bloginfo('description')?></h2>
        </div>
    </div>
+   
+       <div class="row">
+        <div class="col-md-12">
+            <?php 
+                $args = array(
+                    'theme_location' => 'header-menu',
+                    'menu' => 'menu'
+                );
+                wp_nav_menu( $args );
+            ?>
+        </div>
+    </div>
+    
 </head>
 <body>    
