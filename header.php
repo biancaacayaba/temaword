@@ -30,7 +30,7 @@
             <?php 
                 $args = array(
                     'theme_location' => 'header-menu',
-                    'menu' => 'menu'
+                    'menu' => 'menu 1'
                 );
                 wp_nav_menu( $args );
             ?>
